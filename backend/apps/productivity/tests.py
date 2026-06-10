@@ -1,6 +1,6 @@
 from django.test import TestCase
 from django.contrib.auth import get_user_model
-from datetime import date
+from django.utils import timezone
 from .models import Task
 from .utils import update_daily_snapshot
 
@@ -12,7 +12,7 @@ class ProductivityTests(TestCase):
 
     def test_task_completion_updates_snapshot(self):
         # Create a task due today
-        today = date.today()
+        today = timezone.now().date()
         task = Task.objects.create(
             user=self.user,
             title='Test task',
