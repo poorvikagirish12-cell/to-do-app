@@ -1,0 +1,26 @@
+# Django
+db.sqlite3
+*.pyc
+__pycache__/
+.env
+backend/.env
+
+# Node
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Virtual Env
+.venv/
+venv/
+ENV/
+
+# IDE / Editor
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
